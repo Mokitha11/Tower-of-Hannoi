@@ -1,0 +1,17 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+ toh(3,'A','B','C');
+     }
+     public static void toh(int n,char src,char des,char auv){
+         if(n==1){
+             System.out.println("Move disk "+n+"from "+src+"to "+des);
+         }
+         else{
+             toh(n-1,src,des,auv);
+         System.out.println("Move disk "+n+"from "+src+"to "+des);
+             toh(n-1,auv,src,des);
+
+         }
+     }
+}
